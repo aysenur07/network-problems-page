@@ -1,0 +1,144 @@
+/* Genel */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  
+    
+  }
+  
+
+
+header {
+  background-color: #a10d6d;
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+#sidebar {
+  height: 100vh;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #e3f2fd;
+  padding-top: 60px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  border-radius: 0 10px 10px 0;
+  transition: transform 0.3s ease;
+  transform: translateX(0);
+  z-index: 1000;
+}
+
+#sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+#main {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+#main.full {
+  margin-left: 0;
+}
+
+/* Açma butonu */
+#openSidebarBtn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 1100;
+  font-size: 24px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #3498db;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+/* Gizli durum */
+#openSidebarBtn.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Sidebar içi buton */
+#toggleBtn {
+    background-color: #a10d6d;   /* Mor tonlu arka plan */
+    color: white;                /* Beyaz yazı */
+    border: none;                /* Kenarlık kaldır */
+    padding: 10px 20px;          /* İç boşluk */
+    border-radius: 8px;          /* Oval köşeler */
+    cursor: pointer;             /* İmleç değişimi */
+    font-size: 16px;             /* Yazı boyutu */
+    margin: 10px 20px;           /* Butonun etrafında boşluk */
+    transition: background-color 0.3s ease;
+  }
+  
+  #toggleBtn:hover {
+    background-color: #8e0b5d;   /* Üzerine gelince koyulaşır */
+  }
+.toc a {
+    display: block;
+    color: #0d47a1;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #bbdefb;
+    margin-bottom: 5px;
+    white-space: nowrap; /* uzun linklerin taşmasını önler */
+  }
+  
+  .toc a:hover {
+    background-color: #bbdefb;
+  }
+  .problem {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 25px; /* Problemler arasında boşluk */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    gap:10px;
+  }
+  .problem h2 {
+    margin-top: 0;
+    color: #a10d6d;
+  }  
+  .problem-image {
+    display: block;
+  margin-bottom: 20px;
+    width: 40%;
+    
+    margin: 10px;
+    border-radius:5px;
+    margin-right:50px;
+  }
+  .download-link {
+    display: inline-block;
+    margin: 6px 6px 0 0;
+    padding: 6px 12px;
+    background-color: #28a7a7;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    margin-right: 50px;
+  }
+  .download-link:hover {
+    background-color: #21887c;
+    margin-right: 50px;
+  }
+  p {
+    text-indent: 15px; /* İlk satırın başından 20px içeriden başlar */
+  }
